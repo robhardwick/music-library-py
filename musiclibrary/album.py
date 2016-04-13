@@ -17,9 +17,9 @@ from .file import AudioFile, NotAudioException, MissingMetadataException
 class Album(object):
     """ Validate a give list of files as a music album """
     REQUIRED_PROPERTIES = {
-        'mime_type':    'Mixing different formats ({values})',
-        'artist':       'Multiple artists ({values})',
-        'album':        'Different album names ({values})',
+        'mime_type':    '{path}: Mixing different formats ({values})',
+        'artist':       '{path}: Multiple artists ({values})',
+        'album':        '{path}: Different album names ({values})',
     }
 
     def __init__(self, path, files):
@@ -57,9 +57,11 @@ class Album(object):
         """ Set metadata property if consistent across a;; album's files """
         values = set((getattr(audio_file, key) for audio_file in self.files))
         if len(values) < 1:
-            self.errors.append('No values for {key}'.format(key=key))
+            self.errors.append('{path}: No values for {key}'.format(
+                path=self.path, key=key))
         elif len(values) > 1:
-            self.errors.append(error.format(values=', '.join(values)))
+            self.errors.append(error.format(
+                path=self.path, values=', '.join(values)))
         else:
             setattr(self, key, values.pop())
 
