@@ -1,5 +1,5 @@
 # MusicLibraryPy - Tools to analyse and repair/update music libraries
-# Copyright (C) 2016 MusicLibraryPy
+# Copyright © 2016 Rob Hardwick
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

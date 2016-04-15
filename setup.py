@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # MusicLibraryPy - Tools to analyse and repair/update music libraries
-# Copyright (C) 2016 MusicLibraryPy
+# Copyright © 2016 Rob Hardwick
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,12 +20,12 @@ setup(
     name='MusicLibraryPy',
     version='0.1',
     description='Tools to analyse and repair/update music libraries',
-    author='MusicLibraryPy',
-    author_email='music-library-py@localhost',
-    url='https://github.com/music-library-py/music-library-py',
+    author='Rob Hardwick',
+    author_email='robhardwick@gmail.com',
+    url='https://github.com/robhardwick/music-library-py',
     scripts=[
-        'bin/music-library-report',
-        'bin/music-library-update',
+        'tools/music-library-report',
+        'tools/music-library-update',
     ],
     install_requires=[
         'mutagen>=1.31',
