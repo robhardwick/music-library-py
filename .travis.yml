@@ -8,4 +8,4 @@ install:
     - pip install pep8
 
 script:
-    - pep8 *.py tools/* musiclibrary
+    - pep8 --verbose *.py tools/* musiclibrary
