@@ -1,4 +1,4 @@
-# MusicLibraryPy
+# MusicLibraryPy [![Build Status](https://travis-ci.org/robhardwick/music-library-py.png?branch=master)](https://travis-ci.org/robhardwick/music-library-py)
 
 Tools to analyse and repair/update music libraries.
 
